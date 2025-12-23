@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-import { fetchcategories } from "../service/categoryservice";
+import { fetchcategories } from "../service/CategoryService";
 import { fetchItems } from "../service/ItemService";
 
 export const AppContext = createContext(null);
@@ -62,7 +62,7 @@ export const AppContextProvider = (props) => {
 
   const clearCart = () => {
     setCartItems([]);
-  }
+  };
 
   const contextValue = {
     categories,

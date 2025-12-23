@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const createRazorpayOrder = async (data) => {
   return await axios.post(
-    `http://localhost:8080/api/v1.0/payments/create-order`,
+    `https://billing-software-backend-5ien.onrender.com/api/v1.0/payments/create-order`,
     data,
     {
       headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -12,9 +12,8 @@ export const createRazorpayOrder = async (data) => {
 
 export const verifyPayment = async (paymentData) => {
   return await axios.post(
-    "http://localhost:8080/api/v1.0/payments/verify",
+    "https://billing-software-backend-5ien.onrender.com/api/v1.0/payments/verify",
     paymentData,
     { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
   );
 };
-
