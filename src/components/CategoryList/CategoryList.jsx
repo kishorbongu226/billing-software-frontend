@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import "./CategoryList.css";
 import { AppContext } from "../../context/AppContext.jsx";
-import { deleteCategory } from "../../service/categoryservice.js";
+import { deleteCategory } from "../../service/CategoryService.js";
 import toast from "react-hot-toast";
 const CategoryList = () => {
   const { categories, setCategories } = useContext(AppContext);
