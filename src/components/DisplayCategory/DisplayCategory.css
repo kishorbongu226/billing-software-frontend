@@ -1,0 +1,17 @@
+/* Main background for category display area */
+.display-category-bg {
+  background-color: #2e3237;
+  width: 100%;
+  min-height: 100%;
+  padding: 16px 0;
+}
+
+/* Optional: scrollbar styling if overflow exists */
+.display-category-bg::-webkit-scrollbar {
+  width: 6px;
+}
+
+.display-category-bg::-webkit-scrollbar-thumb {
+  background-color: #2f3640;
+  border-radius: 6px;
+}

@@ -1,0 +1,68 @@
+/* Main background */
+.display-items-bg {
+  background-color: #2e3237;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* Padding wrapper */
+.display-items-bg .p-3 {
+  padding: 16px !important;
+}
+
+/* Grid spacing consistency */
+.display-items-bg .row {
+  margin: 0;
+}
+
+/* Search box alignment */
+.display-items-bg .search-box input {
+  background-color: #1f252d;
+  color: #e5e7eb;
+  border: 1px solid #2f3640;
+}
+
+.display-items-bg .search-box input::placeholder {
+  color: #9ca3af;
+}
+
+/* Item card styling (recommended) */
+.item-card {
+  background-color: #1f252d;
+  color: #e5e7eb;
+  border-radius: 12px;
+  border: 1px solid #2f3640;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+}
+
+/* Item image */
+.item-card img {
+  border-radius: 10px;
+  background-color: #111827;
+}
+
+/* Item text */
+.item-card .item-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f3f4f6;
+}
+
+.item-card .item-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+
+
+.sear {
+    padding-top: 20px;
+    
+}

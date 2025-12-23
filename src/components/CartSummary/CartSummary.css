@@ -1,0 +1,45 @@
+/* Make all text black inside CartSummary */
+.cart-summary-details,
+.cart-summary-details span,
+.cart-summary-details div,
+.cart-summary-details p,
+.cart-summary-details h1,
+.cart-summary-details h2,
+.cart-summary-details h3,
+.cart-summary-details h4,
+.cart-summary-details h5,
+.cart-summary-details h6 {
+  color: #000000 !important;
+}
+
+/* Buttons text (override Bootstrap white text) */
+.cart-summary-details + div button,
+.cart-summary-details + div + div button {
+  color: #000000 !important;
+}
+
+.place-order-btn {
+  background: linear-gradient(135deg, #facc15, #f59e0b); /* yellow → amber */
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 6px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  box-shadow: 0 4px 16px rgba(250, 204, 21, 0.35);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.place-order-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(250, 204, 21, 0.55);
+}
+
+/* Disabled state */
+
+.black-item {
+  color: black;
+}

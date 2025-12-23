@@ -1,0 +1,133 @@
+/* ===== Page Container ===== */
+.orders-history-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Title */
+.orders-history-container h2 {
+  color: #2b2c2e;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ===== Scroll Wrapper ===== */
+.table-scroll-container {
+  max-height: 650px;
+  overflow-y: auto;
+  border-radius: 12px;
+  border: 1px solid #2f3640;
+}
+
+/* ===== Table ===== */
+.orders-history-container table {
+  width: 100%;
+  margin: 0;
+  color: #e5e7eb;
+  background-color: #2c2e30;
+  border-collapse: collapse;
+}
+
+/* Header */
+.orders-history-container thead th {
+  position: sticky;
+  top: 0;
+  background-color: #e9ebf0;
+  color: #0c0e12;
+  font-weight: 600;
+  padding: 12px;
+  z-index: 10;
+  border-bottom: 1px solid #2f3640;
+}
+
+/* Body cells */
+.orders-history-container tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #2f3640;
+  vertical-align: middle;
+}
+
+/* Row hover */
+.orders-history-container tbody tr:hover {
+  background-color: #0d0f13;
+}
+
+/* Muted text */
+.orders-history-container .text-muted {
+  color: #060708 !important;
+}
+
+/* Badges */
+.orders-history-container .badge {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* ===== Scrollbar ===== */
+.table-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #374151;
+  border-radius: 6px;
+}
+
+/* ===== Empty / Loading ===== */
+.orders-history-container .text-center {
+  color: #131416;
+  padding: 20px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .table-scroll-container {
+    overflow-x: auto;
+  }
+
+  table th,
+  table td {
+    white-space: nowrap;
+  }
+}
+
+/* ===== Orders Table ===== */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #000000; /* black background */
+  color: #ffffff; /* white text */
+}
+
+/* Header */
+.orders-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #111111; /* dark header */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px;
+  z-index: 10;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+/* Body Cells */
+.orders-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #2a2a2a;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+/* Row Hover */
+.orders-table tbody tr:hover {
+  background-color: #1a1a1a;
+}
+
+/* Muted text (phone number) */
+.orders-table .text-muted {
+  color: #9ca3af !important;
+}

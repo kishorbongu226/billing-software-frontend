@@ -1,0 +1,47 @@
+/* Page / container background */
+.form-container {
+  background-color: #191e24;
+  color: #ffffff;
+}
+
+/* Card */
+.form-container.card {
+  background-color: #191e24;
+  color: #ffffff;
+  border: 1px solid #2a2f36;
+}
+
+/* Labels */
+.form-container label {
+  color: #ffffff;
+}
+
+/* Inputs, textarea */
+.form-container .form-control {
+  background-color: #1f2933;
+  color: #ffffff;
+  border: 1px solid #374151;
+}
+
+/* Placeholder */
+.form-container .form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Color picker */
+.form-container input[type="color"] {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Disabled state */
+.form-container .form-control:disabled {
+  background-color: #111827;
+  color: #9ca3af;
+}
+
+/* Select file image area (optional) */
+.form-container img {
+  filter: brightness(1.1);
+}

@@ -1,0 +1,75 @@
+.explore-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 5rem);
+  box-sizing: border-box;
+  background-color: #F2F2F2
+;
+}
+
+.left-column {
+  flex: 0.7;
+  border: 1px solid #892e2e;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-row {
+  flex: 0.4;
+  box-sizing: border-box;
+}
+
+.horizontal-line {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1p solid #f40707;
+}
+
+.second-row {
+  flex: 0.6;
+  box-sizing: border-box;
+}
+.right-column {
+  flex: 0.3;
+  border: 1px solid #fb0808;
+  border-radius: 8px;
+  padding: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-summary-container {
+  flex: 0.3;
+  border-top: 1px solid #e31010;
+}
+
+.cart-item {
+  background-color: #2e2d2d;
+  padding: 12px;
+  border-bottom: 8px;
+}
+
+/* Make all div borders red inside Explore */
+
+/* Change only divs that already have borders */
+.explore-container .left-column,
+.explore-container .right-column,
+.explore-container .customer-form-container,
+.explore-container .cart-items-container,
+.explore-container .cart-summary-container,
+.explore-container .first-row,
+.explore-container .second-row {
+  border-color: red !important;
+}
+
+.explore-container hr {
+  border-color: red;
+}
+

@@ -1,0 +1,97 @@
+/* Entire cart panel background */
+.cart-items-bg {
+  background-color: #2e3237;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #2f3640;
+}
+
+/* Scrollable content */
+.cart-items-bg .p-3 {
+  padding: 16px !important;
+}
+
+/* Cart items list */
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual cart item card */
+.cart-item {
+  background-color: #1f252d !important;
+  border: 1px solid #2f3640;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* Item name */
+.cart-item h6 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f3f4f6;
+}
+
+/* Item total price */
+.cart-item p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+/* Quantity buttons */
+.cart-item .btn-sm {
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Quantity text */
+.cart-item span {
+  min-width: 22px;
+  text-align: center;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Minus & delete button */
+.cart-item .btn-danger {
+  background-color: #dc2626;
+  border: none;
+}
+
+.cart-item .btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+/* Plus button */
+.cart-item .btn-primary {
+  background-color: #2563eb;
+  border: none;
+}
+
+.cart-item .btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+/* Empty cart message */
+.cart-items-bg .text-light {
+  color: #9ca3af !important;
+  font-size: 14px;
+}
+
+/* Scrollbar styling */
+.cart-items-bg ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-items-bg ::-webkit-scrollbar-thumb {
+  background-color: #2f3640;
+  border-radius: 6px;
+}

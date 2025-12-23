@@ -1,0 +1,41 @@
+/* Full page background */
+.item-form-container {
+  background-color: #191e24;
+  color: #ffffff;
+}
+
+/* Card background */
+.item-form-container .card {
+  background-color: #191e24;
+  color: #ffffff;
+  border: 1px solid #2a2f36;
+}
+
+/* Labels */
+.item-form-container label {
+  color: #ffffff;
+}
+
+/* Inputs, textarea, select */
+.item-form-container .form-control {
+  background-color: #1f2933;
+  color: #ffffff;
+  border: 1px solid #374151;
+}
+
+/* Placeholder text */
+.item-form-container .form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* Select option background */
+.item-form-container option {
+  background-color: #191e24;
+  color: #ffffff;
+}
+
+/* Disabled input */
+.item-form-container .form-control:disabled {
+  background-color: #111827;
+  color: #9ca3af;
+}
