@@ -28,18 +28,27 @@ const Login = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
+
     try {
       const response = await login(data);
-      if (response.status === 200) {
-        toast.success("login successful");
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("role", response.data.role);
-        setAuthData(response.data.token, response.data.role);
-        navigate("/dashboard");
+      console.log("LOGIN RESPONSE:", response.data);
+
+      const { token, role } = response.data;
+
+      if (!token) {
+        toast.error("Token missing from response");
+        return;
       }
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", role);
+      setAuthData(token, role);
+
+      toast.success("Login successful");
+      navigate("/dashboard");
     } catch (error) {
       console.error(error);
-      toast.error("email or password invalid");
+      toast.error("Email or password invalid");
     } finally {
       setLoading(false);
     }
