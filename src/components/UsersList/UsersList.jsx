@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 const UsersList = ({ users, setUsers }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const filteredUsers = users.filter((user) =>
-    user.name.toLowerCase().includes(searchTerm.toLowerCase())
+    (user.name || "").toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const deleteByUserId = async (id) => {
