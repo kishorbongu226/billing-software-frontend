@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import Menubar from "./components/Menubar/Menubar";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ManageUsers from "./pages/ManageUsers/ManageUsers";
@@ -17,10 +17,7 @@ const App = () => {
   const { auth } = useContext(AppContext);
 
   const LoginRoute = ({ element }) => {
-    if (auth.token) {
-      return <Navigate to="/dashboard" replace />;
-    }
-    return element;
+    return auth.token ? <Navigate to="/dashboard" replace /> : element;
   };
 
   const ProtectedRoute = ({ element, allowedRoles }) => {
@@ -35,12 +32,33 @@ const App = () => {
 
   return (
     <div>
-      {location.pathname !== "/login" && <Menubar />}
+      {auth.token && <Menubar />}
       <Toaster />
+
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/explore" element={<Explore />} />
-        {/*admin only routes */}
+        {/* Root */}
+        <Route
+          path="/"
+          element={
+            auth.token ? <Navigate to="/dashboard" /> : <Navigate to="/login" />
+          }
+        />
+
+        {/* Protected routes */}
+        <Route
+          path="/dashboard"
+          element={<ProtectedRoute element={<Dashboard />} />}
+        />
+        <Route
+          path="/explore"
+          element={<ProtectedRoute element={<Explore />} />}
+        />
+        <Route
+          path="/orders"
+          element={<ProtectedRoute element={<OrderHistory />} />}
+        />
+
+        {/* Admin only */}
         <Route
           path="/category"
           element={
@@ -68,13 +86,15 @@ const App = () => {
             />
           }
         />
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/orders" element={<OrderHistory />} />
 
+        {/* Login */}
         <Route path="/login" element={<LoginRoute element={<Login />} />} />
+
+        {/* 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
 };
+
 export default App;
