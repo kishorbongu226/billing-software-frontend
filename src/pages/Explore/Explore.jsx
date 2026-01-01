@@ -8,7 +8,7 @@ import CartItems from "../../components/CartItems/CartItems";
 import CartSummary from "../../components/CartSummary/CartSummary";
 const Explore = () => {
   const { categories } = useContext(AppContext);
-  const [selectedCategory, setSelectedCategory] = useState(" ");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   return (
